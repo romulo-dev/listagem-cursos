@@ -1,0 +1,32 @@
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div *ngFor="let curso of cursos" class="rounded-xl shadow-md overflow-hidden bg-white relative">
+      <div [ngClass]="coresArea[curso.areaConhecimento]" class="p-2 text-center text-white font-bold">
+        {{ curso.areaConhecimento.replace('_', ' ') }}
+      </div>
+  
+      <img [src]="curso.fotoUrl" alt="{{ curso.titulo }}" class="w-full h-40 object-cover">
+  
+      <div class="p-4">
+        <h3 class="text-lg font-semibold">{{ curso.titulo }}</h3>
+        <div class="flex justify-between items-center mt-2">
+          <button (click)="toggleFavorito(curso)">
+            <span [class.text-yellow-400]="curso.favorito" [class.text-gray-400]="!curso.favorito">
+              ★
+            </span>
+          </button>
+  
+          <div class="flex gap-2">
+            <button (click)="deletarCurso(curso.id)">
+              <img src="assets/icons/trash.svg" class="w-6 h-6" alt="Deletar">
+            </button>
+            <button>
+              <img src="assets/icons/edit.svg" class="w-6 h-6" alt="Editar">
+            </button>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
