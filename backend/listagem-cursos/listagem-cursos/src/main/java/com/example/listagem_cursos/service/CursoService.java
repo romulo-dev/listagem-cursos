@@ -1,6 +1,6 @@
 package com.example.listagem_cursos.service;
 
-package com.seuprojeto.cursos.service;
+
 
 import com.seuprojeto.cursos.model.Curso;
 import com.seuprojeto.cursos.repository.CursoRepository;
