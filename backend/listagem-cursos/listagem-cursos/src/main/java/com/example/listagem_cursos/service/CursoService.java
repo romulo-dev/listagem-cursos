@@ -1,7 +1,6 @@
 package com.example.listagem_cursos.service;
 
 
-
 import com.seuprojeto.cursos.model.Curso;
 import com.seuprojeto.cursos.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
